@@ -1,3 +1,6 @@
+
+
+User
 Please make it so that the dropdown only appears when clicked, and stays open.
 <!DOCTYPE html>
 <html lang="en">
@@ -121,6 +124,7 @@ nav a:hover {
 .level-1:hover {
   overflow: hidden;
 }
+
 ChatGPT
 To make the dropdown appear only when clicked and stay open, you can use JavaScript to toggle a class on the dropdown container when it's clicked. Here's the modified HTML and CSS along with JavaScript to achieve this:
 
@@ -4092,3 +4096,1066 @@ User
 It does not meet my requirements do not send another code
 ChatGPT
 I understand. I apologize for the inconvenience. If you have any specific requirements or adjustments you'd like to make to the code, please let me know, and I'll do my best to assist you.
+
+User
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Original styles */
+*{
+    font-size: large;
+}
+      #mjc {
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      #mjc:hover {
+        font-style: italic;
+      }
+
+      nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* center on page */
+      }
+
+      nav a {
+        background-color: #000;
+        color: #000;
+        margin-left: -3px;
+        text-decoration: none; /* remove underline */
+        display: block; /* ensure list items appear as block elements */
+        padding: 5px 5px; /* added padding for better click target */
+      }
+
+      nav a.active {
+        background-color: #fff;
+        color: #000;
+      }
+
+      nav a:hover {
+        background-color: #fff;
+        color: #000;
+        font-style: italic;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; /* remove bullet points */
+      }
+
+      ul li {
+        display: inline-block; /* make list items inline-block to keep them on the same line */
+        vertical-align: top; /* align list items to the top */
+      }
+
+      .mainMenu {
+        display: none; /* hide the main menu initially */
+      }
+
+      .mainMenu.active {
+        display: block; /* show the main menu when active */
+      }
+
+      .sublist {
+        display: none;
+      }
+
+      .sublist.active {
+        display: block;
+      }
+
+      .sublist li {
+        display: inline-block;
+        vertical-align: top;
+      }
+    </style>
+    <title>mjc</title>
+  </head>
+  <body>
+    <nav>
+      <label for="ul" id="mjc">mjc.</label>
+      <ul class="mainMenu">
+        <li>
+          <a href="#" id="work">Work</a>
+          <!-- Hidden sublist under "Work" -->
+          <ul class="sublist">
+            <li><a href="#">Direction</a></li>
+            <li><a href="#">Development</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Life</a></li>
+        <li><a href="#">***</a></li>
+      </ul>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const workButton = document.getElementById("work");
+        const subMenu = document.querySelector(".sublist");
+
+        workButton.addEventListener("click", function () {
+          subMenu.classList.toggle("active"); // Toggle the 'active' class on the sublist
+          // Toggle the 'active' class on the 'Work' link
+          workButton.classList.toggle("active");
+        });
+
+        // Add event listeners to sublist items
+        const sublistItems = document.querySelectorAll(".sublist a");
+        sublistItems.forEach(function (item) {
+          item.addEventListener("click", function () {
+            // Add 'active' class to the 'Work' link
+            workButton.classList.add("active");
+          });
+        });
+
+        const mjcButton = document.getElementById("mjc");
+        const mainMenu = document.querySelector(".mainMenu");
+
+        mjcButton.addEventListener("click", function () {
+          mainMenu.classList.toggle("active"); // Toggle the 'active' class on the main menu
+        });
+
+        const links = document.querySelectorAll("nav a");
+
+        links.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            links.forEach(function (link) {
+              link.classList.remove("active");
+            });
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+Make work, life, and *** remain side by side under mjc at all times
+ChatGPT
+I see the problem now. To keep "Work", "Life", and "***" side by side under "mjc" at all times, you can adjust the display property of the list items. Replace the ul li style with the following:
+
+css
+Copy code
+ul li {
+  display: inline-block;
+  margin-right: 10px; /* Add spacing between list items */
+}
+This will ensure that the list items remain side by side horizontally. Here's the updated code:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Original styles */
+    * {
+      font-size: large;
+    }
+
+    #mjc {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #mjc:hover {
+      font-style: italic;
+    }
+
+    nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    nav a {
+      background-color: #000;
+      color: #000;
+      margin-left: -3px;
+      text-decoration: none;
+      display: block;
+      padding: 5px 5px;
+    }
+
+    nav a.active {
+      background-color: #fff;
+      color: #000;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #000;
+      font-style: italic;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      display: inline-block;
+      margin-right: 10px; /* Add spacing between list items */
+      vertical-align: top;
+    }
+
+    .mainMenu {
+      display: none;
+    }
+
+    .mainMenu.active {
+      display: block;
+    }
+
+    .sublist {
+      display: none;
+    }
+
+    .sublist.active {
+      display: block;
+    }
+
+    .sublist li {
+      display: inline-block;
+      vertical-align: top;
+    }
+  </style>
+  <title>mjc</title>
+</head>
+<body>
+  <nav>
+    <label for="ul" id="mjc">mjc.</label>
+    <ul class="mainMenu">
+      <li>
+        <a href="#" id="work">Work</a>
+        <!-- Hidden sublist under "Work" -->
+        <ul class="sublist">
+          <li><a href="#">Direction</a></li>
+          <li><a href="#">Development</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Life</a></li>
+      <li><a href="#">***</a></li>
+    </ul>
+  </nav>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const workButton = document.getElementById("work");
+      const subMenu = document.querySelector(".sublist");
+
+      workButton.addEventListener("click", function () {
+        subMenu.classList.toggle("active");
+        workButton.classList.toggle("active");
+      });
+
+      const sublistItems = document.querySelectorAll(".sublist a");
+      sublistItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          workButton.classList.add("active");
+        });
+      });
+
+      const mjcButton = document.getElementById("mjc");
+      const mainMenu = document.querySelector(".mainMenu");
+
+      mjcButton.addEventListener("click", function () {
+        mainMenu.classList.toggle("active");
+      });
+
+      const links = document.querySelectorAll("nav a");
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          links.forEach(function (link) {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+This should keep "Work", "Life", and "***" side by side under "mjc" at all times. Let me know if this meets your requirements.
+
+User
+N O, when the sub list is active the main menu life  goes underneath the sublist this is wrong.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Original styles */
+*{
+    font-size: large;
+}
+      #mjc {
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      #mjc:hover {
+        font-style: italic;
+      }
+
+      nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* center on page */
+      }
+
+      nav a {
+        background-color: #000;
+        color: #000;
+        margin-left: -3px;
+        text-decoration: none; /* remove underline */
+        display: block; /* ensure list items appear as block elements */
+        padding: 5px 5px; /* added padding for better click target */
+      }
+
+      nav a.active {
+        background-color: #fff;
+        color: #000;
+      }
+
+      nav a:hover {
+        background-color: #fff;
+        color: #000;
+        font-style: italic;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; /* remove bullet points */
+      }
+
+      ul li {
+        display: inline-block; /* make list items inline-block to keep them on the same line */
+        vertical-align: top; /* align list items to the top */
+      }
+
+      .mainMenu {
+        display: none; /* hide the main menu initially */
+      }
+
+      .mainMenu.active {
+        display: block; /* show the main menu when active */
+      }
+
+      .sublist {
+        display: none;
+      }
+
+      .sublist.active {
+        display: block;
+      }
+
+      .sublist li {
+        display: inline-block;
+        vertical-align: top;
+      }
+    </style>
+    <title>mjc</title>
+  </head>
+  <body>
+    <nav>
+      <label for="ul" id="mjc">mjc.</label>
+      <ul class="mainMenu">
+        <li>
+          <a href="#" id="work">Work</a>
+          <!-- Hidden sublist under "Work" -->
+          <ul class="sublist">
+            <li><a href="#">Direction</a></li>
+            <li><a href="#">Development</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Life</a></li>
+        <li><a href="#">***</a></li>
+      </ul>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const workButton = document.getElementById("work");
+        const subMenu = document.querySelector(".sublist");
+
+        workButton.addEventListener("click", function () {
+          subMenu.classList.toggle("active"); // Toggle the 'active' class on the sublist
+          // Toggle the 'active' class on the 'Work' link
+          workButton.classList.toggle("active");
+        });
+
+        // Add event listeners to sublist items
+        const sublistItems = document.querySelectorAll(".sublist a");
+        sublistItems.forEach(function (item) {
+          item.addEventListener("click", function () {
+            // Add 'active' class to the 'Work' link
+            workButton.classList.add("active");
+          });
+        });
+
+        const mjcButton = document.getElementById("mjc");
+        const mainMenu = document.querySelector(".mainMenu");
+
+        mjcButton.addEventListener("click", function () {
+          mainMenu.classList.toggle("active"); // Toggle the 'active' class on the main menu
+        });
+
+        const links = document.querySelectorAll("nav a");
+
+        links.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            links.forEach(function (link) {
+              link.classList.remove("active");
+            });
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+ChatGPT
+I see, you want to ensure that when the sublist is active, it doesn't affect the layout of the main menu items. To achieve this, you can set the position of the sublist to be absolute, so it doesn't affect the layout flow of its parent container. Here's how you can modify the CSS:
+
+css
+Copy code
+.sublist {
+  display: none;
+  position: absolute; /* Set position to absolute */
+}
+
+.sublist.active {
+  display: block;
+}
+This will ensure that the sublist doesn't affect the layout of the main menu items when it's active. Here's the updated code:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Original styles */
+    * {
+      font-size: large;
+    }
+
+    #mjc {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #mjc:hover {
+      font-style: italic;
+    }
+
+    nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    nav a {
+      background-color: #000;
+      color: #000;
+      margin-left: -3px;
+      text-decoration: none;
+      display: block;
+      padding: 5px 5px;
+    }
+
+    nav a.active {
+      background-color: #fff;
+      color: #000;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #000;
+      font-style: italic;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    .mainMenu {
+      display: none;
+      position: relative; /* Ensure position is relative */
+    }
+
+    .mainMenu.active {
+      display: block;
+    }
+
+    .sublist {
+      display: none;
+      position: absolute; /* Set position to absolute */
+    }
+
+    .sublist.active {
+      display: block;
+    }
+
+    .sublist li {
+      display: inline-block;
+      vertical-align: top;
+    }
+  </style>
+  <title>mjc</title>
+</head>
+<body>
+  <nav>
+    <label for="ul" id="mjc">mjc.</label>
+    <ul class="mainMenu">
+      <li>
+        <a href="#" id="work">Work</a>
+        <!-- Hidden sublist under "Work" -->
+        <ul class="sublist">
+          <li><a href="#">Direction</a></li>
+          <li><a href="#">Development</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Life</a></li>
+      <li><a href="#">***</a></li>
+    </ul>
+  </nav>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const workButton = document.getElementById("work");
+      const subMenu = document.querySelector(".sublist");
+
+      workButton.addEventListener("click", function () {
+        subMenu.classList.toggle("active");
+        workButton.classList.toggle("active");
+      });
+
+      const sublistItems = document.querySelectorAll(".sublist a");
+      sublistItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          workButton.classList.add("active");
+        });
+      });
+
+      const mjcButton = document.getElementById("mjc");
+      const mainMenu = document.querySelector(".mainMenu");
+
+      mjcButton.addEventListener("click", function () {
+        mainMenu.classList.toggle("active");
+      });
+
+      const links = document.querySelectorAll("nav a");
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          links.forEach(function (link) {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+This should ensure that the sublist doesn't affect the layout of the main menu items. Let me know if this resolves the issue.
+
+User
+Okay make the sublist items side by side
+ChatGPT
+To make the sublist items appear side by side, you can use the display: inline-block; property for the li elements within the sublist. Here's the updated CSS:
+
+css
+Copy code
+.sublist li {
+  display: inline-block;
+  margin-right: 10px; /* Adjust margin as needed */
+  vertical-align: top;
+}
+This will ensure that the sublist items are displayed horizontally. Here's the complete code with the update:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Original styles */
+    * {
+      font-size: large;
+    }
+
+    #mjc {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #mjc:hover {
+      font-style: italic;
+    }
+
+    nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    nav a {
+      background-color: #000;
+      color: #000;
+      margin-left: -3px;
+      text-decoration: none;
+      display: block;
+      padding: 5px 5px;
+    }
+
+    nav a.active {
+      background-color: #fff;
+      color: #000;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #000;
+      font-style: italic;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    .mainMenu {
+      display: none;
+      position: relative;
+    }
+
+    .mainMenu.active {
+      display: block;
+    }
+
+    .sublist {
+      display: none;
+      position: absolute;
+    }
+
+    .sublist.active {
+      display: block;
+    }
+
+    .sublist li {
+      display: inline-block;
+      margin-right: 10px; /* Adjust margin as needed */
+      vertical-align: top;
+    }
+  </style>
+  <title>mjc</title>
+</head>
+<body>
+  <nav>
+    <label for="ul" id="mjc">mjc.</label>
+    <ul class="mainMenu">
+      <li>
+        <a href="#" id="work">Work</a>
+        <!-- Hidden sublist under "Work" -->
+        <ul class="sublist">
+          <li><a href="#">Direction</a></li>
+          <li><a href="#">Development</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Life</a></li>
+      <li><a href="#">***</a></li>
+    </ul>
+  </nav>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const workButton = document.getElementById("work");
+      const subMenu = document.querySelector(".sublist");
+
+      workButton.addEventListener("click", function () {
+        subMenu.classList.toggle("active");
+        workButton.classList.toggle("active");
+      });
+
+      const sublistItems = document.querySelectorAll(".sublist a");
+      sublistItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          workButton.classList.add("active");
+        });
+      });
+
+      const mjcButton = document.getElementById("mjc");
+      const mainMenu = document.querySelector(".mainMenu");
+
+      mjcButton.addEventListener("click", function () {
+        mainMenu.classList.toggle("active");
+      });
+
+      const links = document.querySelectorAll("nav a");
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          links.forEach(function (link) {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+Now, the sublist items should appear side by side horizontally. Adjust the margin-right property in the .sublist li style as needed to adjust the spacing between sublist items.
+
+User
+No when active make this sub list items side by side in a line underneath the main menu
+ChatGPT
+I see, you want the sublist items to appear in a line underneath the main menu when the sublist is active. To achieve this, we need to adjust the positioning of the sublist relative to its parent li element. Here's the updated CSS and HTML:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Original styles */
+    * {
+      font-size: large;
+    }
+
+    #mjc {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #mjc:hover {
+      font-style: italic;
+    }
+
+    nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    nav a {
+      background-color: #000;
+      color: #000;
+      margin-left: -3px;
+      text-decoration: none;
+      display: block;
+      padding: 5px 5px;
+    }
+
+    nav a.active {
+      background-color: #fff;
+      color: #000;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #000;
+      font-style: italic;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+      position: relative; /* Ensure relative positioning */
+    }
+
+    .mainMenu {
+      display: none;
+      position: relative;
+    }
+
+    .mainMenu.active {
+      display: block;
+    }
+
+    .sublist {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position sublist below parent */
+      left: 0; /* Align sublist with parent */
+      width: 100%; /* Occupy full width */
+    }
+
+    .sublist.active {
+      display: block;
+    }
+
+    .sublist li {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+  </style>
+  <title>mjc</title>
+</head>
+<body>
+  <nav>
+    <label for="ul" id="mjc">mjc.</label>
+    <ul class="mainMenu">
+      <li>
+        <a href="#" id="work">Work</a>
+        <!-- Hidden sublist under "Work" -->
+        <ul class="sublist">
+          <li><a href="#">Direction</a></li>
+          <li><a href="#">Development</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Life</a></li>
+      <li><a href="#">***</a></li>
+    </ul>
+  </nav>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const workButton = document.getElementById("work");
+      const subMenu = document.querySelector(".sublist");
+
+      workButton.addEventListener("click", function () {
+        subMenu.classList.toggle("active");
+        workButton.classList.toggle("active");
+      });
+
+      const sublistItems = document.querySelectorAll(".sublist a");
+      sublistItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          workButton.classList.add("active");
+        });
+      });
+
+      const mjcButton = document.getElementById("mjc");
+      const mainMenu = document.querySelector(".mainMenu");
+
+      mjcButton.addEventListener("click", function () {
+        mainMenu.classList.toggle("active");
+      });
+
+      const links = document.querySelectorAll("nav a");
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          links.forEach(function (link) {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+Now, the sublist items will appear in a line underneath the main menu when the sublist is active. Adjust the styles as needed to fit your design preferences.
+
+User
+Nothing changed I wanted so that when I click work Direction and development appear underneath main menu side by side
+ChatGPT
+Apologies for the misunderstanding. To achieve that, we need to adjust the CSS positioning of the sublist and its items. Here's the updated code:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Original styles */
+    * {
+      font-size: large;
+    }
+
+    #mjc {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    #mjc:hover {
+      font-style: italic;
+    }
+
+    nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    nav a {
+      background-color: #000;
+      color: #000;
+      margin-left: -3px;
+      text-decoration: none;
+      display: block;
+      padding: 5px 5px;
+    }
+
+    nav a.active {
+      background-color: #fff;
+      color: #000;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #000;
+      font-style: italic;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+      position: relative;
+    }
+
+    .mainMenu {
+      display: none;
+      position: relative;
+    }
+
+    .mainMenu.active {
+      display: block;
+    }
+
+    .sublist {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position sublist below parent */
+      left: 0; /* Align sublist with parent */
+      width: auto; /* Adjust width automatically */
+      white-space: nowrap; /* Prevent sublist items from wrapping */
+    }
+
+    .sublist.active {
+      display: block;
+    }
+
+    .sublist li {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+  </style>
+  <title>mjc</title>
+</head>
+<body>
+  <nav>
+    <label for="ul" id="mjc">mjc.</label>
+    <ul class="mainMenu">
+      <li>
+        <a href="#" id="work">Work</a>
+        <!-- Hidden sublist under "Work" -->
+        <ul class="sublist">
+          <li><a href="#">Direction</a></li>
+          <li><a href="#">Development</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Life</a></li>
+      <li><a href="#">***</a></li>
+    </ul>
+  </nav>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const workButton = document.getElementById("work");
+      const subMenu = document.querySelector(".sublist");
+
+      workButton.addEventListener("click", function () {
+        subMenu.classList.toggle("active");
+        workButton.classList.toggle("active");
+      });
+
+      const sublistItems = document.querySelectorAll(".sublist a");
+      sublistItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          workButton.classList.add("active");
+        });
+      });
+
+      const mjcButton = document.getElementById("mjc");
+      const mainMenu = document.querySelector(".mainMenu");
+
+      mjcButton.addEventListener("click", function () {
+        mainMenu.classList.toggle("active");
+      });
+
+      const links = document.querySelectorAll("nav a");
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          links.forEach(function (link) {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+Now, when you click on "Work", "Direction" and "Development" will appear side by side underneath the main menu. Adjust the styles further as needed.
+
+User
+CORRECT good work champ
+ChatGPT
+Thank you! If you have any more questions or need further assistance, feel free to ask. I'm here to help!
