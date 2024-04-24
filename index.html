@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Original styles */
+      * {
+        font-size: large;
+      }
+
+      #mjc {
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      #mjc:hover {
+        font-style: italic;
+      }
+
+      nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      nav a {
+        background-color: #000;
+        color: #000;
+        margin-left: -3px;
+        text-decoration: none;
+        display: block;
+        padding: 5px 5px;
+      }
+
+      nav a.active {
+        background-color: #fff;
+        color: #000;
+      }
+
+      nav a:hover {
+        background-color: #fff;
+        color: #000;
+        font-style: italic;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      ul li {
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: top;
+        position: relative;
+      }
+
+      .mainMenu {
+        display: none;
+        position: relative;
+      }
+
+      .mainMenu.active {
+        display: block;
+      }
+
+      .sublist {
+        display: none;
+        position: absolute;
+        top: 100%; /* Position sublist below parent */
+        left: 0; /* Align sublist with parent */
+        width: auto; /* Adjust width automatically */
+        white-space: nowrap; /* Prevent sublist items from wrapping */
+      }
+
+      .sublist.active {
+        display: block;
+      }
+
+      .sublist li {
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: top;
+      }
+    </style>
+    <title>mjc</title>
+  </head>
+  <body>
+    <nav>
+      <div class="mjc">
+        <label for="ul" id="mjc">mjc.</label>
+        <ul class="mainMenu">
+          <li id="workParent">
+            <a href="#" class="Level_1" id="work">Work</a>
+            <!-- Hidden sublist under "Work" -->
+            <ul class="sublist">
+              <li><a href="#">Direction</a></li>
+              <li><a href="#">Development</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="Level_1">Life</a></li>
+          <ul class="sublist">
+            <li><a href="#">Art</a></li>
+            <li><a href="#">Agriculture</a></li>
+          </ul>
+          <li><a href="#" class="Level_1">***</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mainMenuItems = document.querySelectorAll(".mainMenu .Level_1");
+        const subLists = document.querySelectorAll(".sublist");
+
+        mainMenuItems.forEach(function (item) {
+          item.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Toggle active class for the clicked menu item
+            mainMenuItems.forEach(function (menuItem) {
+              menuItem.classList.remove("active");
+            });
+            this.classList.add("active");
+
+            // Toggle active class for the corresponding sublist
+            subLists.forEach(function (subList) {
+              subList.classList.remove("active");
+            });
+            const sublist = this.nextElementSibling;
+            if (sublist && sublist.classList.contains("sublist")) {
+              sublist.classList.add("active");
+            }
+          });
+        });
+
+        const mjcButton = document.getElementById("mjc");
+        const mainMenu = document.querySelector(".mainMenu");
+
+        mjcButton.addEventListener("click", function () {
+          mainMenu.classList.toggle("active");
+        });
+
+        // CLOSE ALL LISTS IF NO ELEMENT IS CLICKED.
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest(".mjc")) {
+            mainMenu.classList.remove("active");
+            subLists.forEach(function (subList) {
+              subList.classList.remove("active");
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
