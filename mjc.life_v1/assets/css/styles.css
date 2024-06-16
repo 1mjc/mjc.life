@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mjc{
+  position: relative;
+  display: inline-block;
+}
+
+footer {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: center; 
+  text-align: center; 
+}

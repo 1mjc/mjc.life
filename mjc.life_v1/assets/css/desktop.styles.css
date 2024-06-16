@@ -1,0 +1,136 @@
+@media screen and (min-width: 901px) {
+  #mjc {
+    font-size: 10rem;
+    cursor: pointer;
+  }
+
+  #mjc.open {
+    font-size: 3rem;
+  }
+
+  a {
+    background-color: #000;
+    color: #000;
+    margin-left: -0.2rem;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+  }
+
+  a.active {
+    background-color: #fff;
+    color: #000;
+  }
+
+  a:hover {
+    background-color: #fff;
+    color: #000;
+    font-style: italic;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul li {
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: top;
+    position: relative;
+  }
+
+  /*****************************************************************************/
+  /* MENU */
+  .menu {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .mainMenu {
+    display: none;
+    position: relative;
+  }
+
+  .mainMenu.active {
+    display: block;
+  }
+
+  .sublist {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .sublist.active {
+    display: block;
+  }
+
+  .sublist li {
+    display: inline-block;
+    margin-right: 0.2rem;
+    vertical-align: top;
+  }
+
+  .subSublist {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .subSublist.active {
+    display: block;
+  }
+
+  .subSublist li {
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: top;
+  }
+
+  /*****************************************************************************/
+  /* GALLERIES */
+  .gallery {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  .gallery-content {
+    display: inline-flex;
+    gap: 10px;
+  }
+
+  .gallery-content div {
+    flex-shrink: 0;
+  }
+
+  .gallery-content img {
+    max-height: 250px;
+    height: auto;
+    width: auto;
+  }
+
+  /*****************************************************************************/
+  /* DESCRIPTION */
+  .description .container {
+    max-width: 24rem;
+    padding: 4rem;
+    text-align: center;
+    margin-top: 4rem;
+    word-wrap: break-word;
+    background-color: #000;
+    color: #fff;
+  }
+}
