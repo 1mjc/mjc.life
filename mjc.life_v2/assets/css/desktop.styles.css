@@ -1,0 +1,140 @@
+/* DESKTOP STYLES */
+@media screen and (min-width: 901px) {
+  /* TITLE */
+  #mjc {
+    font-size: 10rem; /* Adjust title font size for desktop */
+    cursor: pointer; /* Add cursor pointer for interactivity */
+  }
+
+  #mjc.open {
+    font-size: 3rem; /* Adjust title font size when open for desktop */
+  }
+/* ***************************************************************** */
+
+  /* MENU */
+  .menu {
+    width: 100%; /* Full width menu */
+    background-color: #333; /* Dark background */
+    color: white; /* White text color */
+    padding: 10px 0; /* Padding for top and bottom */
+    text-align: center; /* Centered text */
+  }
+
+  .mainMenu {
+    display: none; /* Default invisible */
+    position: relative; /* Relative positioning */
+  }
+
+  .mainMenu.active {
+    display: block; /* Active revealed */
+  }
+/* ***************************************************************** */
+
+  /* ITEMS */
+  a {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    margin-left: -0.2rem; /* Slight left margin */
+    text-decoration: none; /* No underline */
+    display: block; /* Block display */
+    padding: 0.5rem; /* Padding for all sides */
+  }
+
+  a.active {
+    background-color: #fff; /* White background for active state */
+    color: #000; /* Black text color */
+  }
+
+  a:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text color */
+    font-style: italic; /* Italic font style on hover */
+  }
+
+  ul {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    list-style: none; /* No list style */
+  }
+
+  ul li {
+    display: inline-block; /* Inline block display */
+    margin-right: 0.5rem; /* Right margin */
+    vertical-align: top; /* Align to top */
+    position: relative; /* Relative positioning */
+  }
+
+  .sublist {
+    display: none; /* Hidden by default */
+    position: absolute; /* Absolute positioning */
+    top: 100%; /* Position below parent */
+    left: 0; /* Align to left */
+    width: auto; /* Auto width */
+    white-space: nowrap; /* No wrapping */
+  }
+
+  .sublist.active {
+    display: block; /* Visible when active */
+  }
+
+  .sublist li {
+    display: inline-block; /* Inline block display */
+    margin-right: 0.2rem; /* Right margin */
+    vertical-align: top; /* Align to top */
+  }
+
+  .subSublist {
+    display: none; /* Hidden by default */
+    position: absolute; /* Absolute positioning */
+    top: 100%; /* Position below parent */
+    left: 0; /* Align to left */
+    width: auto; /* Auto width */
+    white-space: nowrap; /* No wrapping */
+  }
+
+  .subSublist.active {
+    display: block; /* Visible when active */
+  }
+
+  .subSublist li {
+    display: inline-block; /* Inline block display */
+    margin-right: 0.5rem; /* Right margin */
+    vertical-align: top; /* Align to top */
+  }
+/* ***************************************************************** */
+
+  /* GALLERIES */
+  .gallery {
+    overflow-x: auto; /* Horizontal scrolling */
+    overflow-y: hidden; /* No vertical scrolling */
+    white-space: nowrap; /* No wrapping */
+    max-width: 100%; /* Full width */
+  }
+
+  .gallery-content {
+    display: inline-flex; /* Inline flex display */
+    gap: 10px; /* Gap between items */
+  }
+
+  .gallery-content div {
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+
+  .gallery-content img {
+    max-height: 250px; /* Max height for images */
+    height: auto; /* Auto height */
+    width: auto; /* Auto width */
+  }
+/* ***************************************************************** */
+
+  /* DESCRIPTION */
+  .description .container {
+    max-width: 24rem; /* Max width */
+    padding: 1rem; /* Padding for all sides */
+    text-align: center; /* Centered text */
+    margin-top: 4rem; /* Top margin */
+    word-wrap: break-word; /* Wrap words */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+  }
+}

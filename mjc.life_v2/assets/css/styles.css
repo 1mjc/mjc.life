@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex; /* all containers within body become flexboxes */
+  flex-direction: column; /* and are stacked vertically */
+  align-items: center; /* and are center aligned horizontally */
+  justify-content: center; /* and are center aligned vertically in the screen */
+}
+
+.mjc{
+  position: relative;
+  display: inline-block; /* it will be able to be next to other elements */
+}
+
+footer {
+  display: inline-block; /* like this one */
+  margin-left: 5px;
+  vertical-align: center; 
+  text-align: center; 
+}
