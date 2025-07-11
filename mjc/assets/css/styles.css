@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex; /* all containers within body become flexboxes */
+  flex-direction: column; /* and are stacked vertically */
+  align-items: center; /* and are center aligned horizontally */
+  justify-content: center; /* and are center aligned vertically in the screen */
+}
+
+.mjc{
+  position: relative;
+  display: inline-block; /* it will be able to be next to other elements */
+  transition: opacity 0.3s ease;
+}
+
+.mjc:hover {
+  opacity: 0.7;
+}
+
+footer {
+  display: inline-block; /* like this one */
+  margin-left: 5px;
+  vertical-align: center; 
+  text-align: center; 
+}
+
+/* Footer Navigation Fade Effects */
+footer nav a {
+  transition: opacity 0.3s ease;
+}
+
+footer nav a:hover {
+  opacity: 0.7;
+}
+
+body > div[style*="position:fixed"] a {
+  background: none !important;
+  border: none !important;
+  display: inline !important;
+  color: inherit;
+  text-decoration: none;
+  padding: 0 2px;
+  font-size: 0.7rem;
+}
+
+/* Menu Link Hover Effects */
+.mainMenu a {
+  transition: opacity 0.3s ease;
+}
+
+.mainMenu a:hover {
+  opacity: 0.7;
+}
+
+/* Submenu Link Styles */
+.sublist a, .subSublist a {
+  transition: opacity 0.3s ease;
+}
+
+.sublist a:hover, .subSublist a:hover {
+  opacity: 0.7;
+}
+
+/* Content Container Fade Effects */
+.content.container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content.container[style*="block"] {
+  animation: contentFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gallery Fade Effects */
+.gallery.container {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery.container[style*="flex"] {
+  animation: galleryFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes galleryFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Gallery Images Hover Effects */
+.gallery img {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.9;
+}
+
+.gallery img:hover {
+  opacity: 1;
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Links Hover Effects */
+.contact-links a {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  display: inline-block;
+}
+
+.contact-links a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  color: #007acc;
+}
+
+/* Description Links */
+#link {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+#link:hover {
+  opacity: 1;
+  transform: translateX(3px);
+  color: #007acc;
+}
+
+/* Background Animation Styles */
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.85); /* Adjust opacity as needed */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.background-image {
+  position: absolute;
+  width: 300px; /* Adjust size as needed */
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 3000ms ease-in-out;
+  filter: blur(1px); /* Optional: slight blur for more subtle effect */
+}
+
+/* Randomize positions for different images */
+.background-image:nth-child(1) { top: 10%; left: 5%; transform: rotate(-5deg); }
+.background-image:nth-child(2) { top: 20%; right: 10%; transform: rotate(3deg); }
+.background-image:nth-child(3) { bottom: 30%; left: 15%; transform: rotate(-2deg); }
+.background-image:nth-child(4) { top: 50%; left: 20%; transform: rotate(4deg); }
+.background-image:nth-child(5) { bottom: 20%; right: 5%; transform: rotate(-3deg); }
+.background-image:nth-child(6) { top: 15%; left: 60%; transform: rotate(2deg); }
+.background-image:nth-child(7) { bottom: 15%; left: 50%; transform: rotate(-4deg); }
+.background-image:nth-child(8) { top: 30%; right: 25%; transform: rotate(1deg); }
+.background-image:nth-child(9) { bottom: 40%; right: 30%; transform: rotate(-1deg); }
+.background-image:nth-child(10) { top: 40%; left: 10%; transform: rotate(3deg); }
+.background-image:nth-child(11) { bottom: 10%; left: 30%; transform: rotate(-2deg); }
+.background-image:nth-child(12) { top: 25%; right: 15%; transform: rotate(4deg); }
+.background-image:nth-child(13) { bottom: 25%; right: 45%; transform: rotate(-3deg); }
+.background-image:nth-child(14) { top: 60%; left: 40%; transform: rotate(2deg); }
+.background-image:nth-child(15) { bottom: 35%; left: 5%; transform: rotate(-1deg); }
+.background-image:nth-child(16) { top: 35%; right: 40%; transform: rotate(3deg); }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .background-image {
+      width: 200px;
+      height: 200px;
+  }
+  
+  /* Adjust hover effects for mobile */
+  .mainMenu a:hover {
+    transform: translateX(3px);
+  }
+  
+  .sublist a:hover, .subSublist a:hover {
+    transform: translateX(5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .background-image {
+      width: 150px;
+      height: 150px;
+  }
+  
+  /* Reduce transforms for smaller screens */
+  .mjc:hover {
+    transform: none;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.01);
+  }
+}
+
+/* Fade Animations */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Loading Animation for Smooth Transitions */
+.loading {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.loaded {
+  opacity: 1;
+}
+
+/* Black box styling for descriptions */
+.description-box {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description-box h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.description-box p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.description-box a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Grid gallery styling */
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.grid-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Project images styling - inline scrollable */
+.project-images {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-images::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-images::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.project-images::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.project-images::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.project-images img {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 600%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure sections stay in view */
+.content.container {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .grid-gallery {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .description-box {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .project-images img {
+    width: 250px;
+    height: 150px;
+  }
+}

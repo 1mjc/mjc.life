@@ -1,0 +1,253 @@
+/* DESKTOP STYLES */
+@media screen and (min-width: 901px) {
+  /* TITLE */
+  #mjc {
+    font-size: 10rem; /* Adjust title font size for desktop */
+    cursor: pointer; /* Add cursor pointer for interactivity */
+  }
+
+  #mjc.open {
+    font-size: 3rem; /* Adjust title font size when open for desktop */
+  }
+/* ***************************************************************** */
+
+  /* MENU */
+  .menu {
+    width: 100%; /* Full width menu */
+    background-color: #333; /* Dark background */
+    color: white; /* White text color */
+    padding: 10px 0; /* Padding for top and bottom */
+    text-align: center; /* Centered text */
+  }
+
+  .mainMenu {
+    display: none; /* Default invisible */
+    position: relative; /* Relative positioning */
+  }
+
+  .mainMenu.active {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .mainMenu > li {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 0.5rem;
+    position: relative;
+  }
+/* ***************************************************************** */
+
+  /* ITEMS */
+  a {
+    background-color: #000; /* Black background */
+    color: #000; /* Black text color */
+    margin-left: -0.2rem; /* Slight left margin */
+    text-decoration: none; /* No underline */
+    display: block; /* Block display */
+    padding: 0.5rem; /* Padding for all sides */
+  }
+
+  a.active {
+    background-color: #fff; /* White background for active state */
+    color: #000; /* Black text color */
+  }
+
+  a:hover {
+    background-color: #fff; /* White background on hover */
+    color: #000; /* Black text color */
+    font-style: italic; /* Italic font style on hover */
+  }
+
+  ul {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    list-style: none; /* No list style */
+  }
+
+  ul li {
+    display: inline-block; /* Inline block display */
+    margin-right: 0.5rem; /* Right margin */
+    vertical-align: top; /* Align to top */
+    position: relative; /* Relative positioning */
+  }
+
+  .sublist {
+    display: none; /* Hidden by default */
+    position: absolute; /* Absolute positioning */
+    top: 100%; /* Position below parent */
+    left: 0; /* Align to left */
+    width: auto; /* Auto width */
+    white-space: normal; /* Allow wrapping */
+  }
+
+  .sublist.active {
+    display: block; /* Visible when active */
+  }
+
+  .sublist li {
+    display: block; /* Stack vertically */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 0.2rem; /* Add bottom margin for spacing */
+  }
+
+  .subSublist {
+    display: none; /* Hidden by default */
+    position: absolute; /* Absolute positioning */
+    top: 100%; /* Position below parent */
+    left: 0; /* Align to left */
+    width: auto; /* Auto width */
+    white-space: nowrap; /* No wrapping */
+  }
+
+  .subSublist.active {
+    display: block; /* Visible when active */
+  }
+
+  .subSublist li {
+    display: inline-block; /* Inline block display */
+    margin-right: 0.5rem; /* Right margin */
+    vertical-align: top; /* Align to top */
+  }
+
+  .sublist a {
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+/* ***************************************************************** */
+
+  /* GALLERIES */
+  .gallery {
+    overflow-x: auto; /* Horizontal scrolling */
+    overflow-y: hidden; /* No vertical scrolling */
+    white-space: nowrap; /* No wrapping */
+    max-width: 100%; /* Full width */
+  }
+
+  .gallery-content {
+    display: inline-flex; /* Inline flex display */
+    gap: 10px; /* Gap between items */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery-content div {
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+
+  .gallery-content img {
+    max-width: 300px;
+    max-height: 250px;
+    height: auto;
+    width: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-content img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Grid gallery styling - desktop */
+  .grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .grid-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Project images styling - desktop */
+  .project-images {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .project-images::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .project-images::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  .project-images::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  .project-images::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .project-images img,
+  .gallery-content img {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 600%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background: #fff;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .img-caption {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .img-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    min-width: 0;
+  }
+
+  /* Content container - desktop */
+  .content.container {
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 2rem;
+  }
+}

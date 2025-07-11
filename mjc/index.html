@@ -1,0 +1,759 @@
+<!-- mjc -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="[Insert a brief description of your portfolio site here]"
+    />
+    <meta name="keywords" content="" />
+    <meta name="author" content="mjc" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/desktop.styles.css" />
+    <link rel="stylesheet" href="./assets/css/tablet.styles.css" />
+    <link rel="stylesheet" href="./assets/css/phone.styles.css" />
+    <title>mjc</title>
+  </head>
+  <body>
+    <!-- Background Animation Container -->
+    <div class="background-animation" id="backgroundAnimation"></div>
+    <!-- Optional overlay for better text readability -->
+    <div class="background-overlay"></div>
+    <!-- ================= HEADER & NAVIGATION ================= -->
+    <header class="site-header container">
+      <label for="ul" class="mjc" id="mjc">mjc </label> &copy; 24
+    </header>
+    <nav
+      class="main-navigation container"
+      role="navigation"
+      aria-label="Main menu"
+    >
+      <ul class="mainMenu">
+        <!--LEVEL 1 MENU-->
+        <li id="work">
+          <a href="#" class="Level_1">Projects</a>
+          <ul class="sublist" id="subWork">
+            <!-- LEVEL 2 MENU -->
+            <li id="work-studio">
+              <a href="#studio" id="studioLink">Studio Publishing Framework</a>
+            </li>
+            <li id="work-gooddirt">
+              <a href="#gooddirt" id="gooddirtLink">Good Dirt Co. System</a>
+            </li>
+            <li id="work-vrxp">
+              <a href="#vrxp" id="vrxpLink">VR Experience System</a>
+            </li>
+            <li id="work-emporium">
+              <a href="#emporium" id="emporiumLink">EMPORIUM Strategy</a>
+            </li>
+          </ul>
+        </li>
+        <li id="life">
+          <a href="#" class="Level_1">Brands</a>
+          <ul class="sublist" id="subLife">
+            <li id="life-mangosalad">
+              <a href="#mangosaladBrand" id="mangosaladBrandLink">Mangosalad</a>
+            </li>
+            <li id="life-arthouse">
+              <a href="#arthouse" id="arthouseLink">Arthouse</a>
+            </li>
+            <li id="life-gooddirt">
+              <a href="#gooddirt" id="gooddirtLink">Good Dirt Co.</a>
+            </li>
+            <li id="life-neuroline">
+              <a href="#neuroline" id="neurolineLink">Neuroline</a>
+            </li>
+          </ul>
+        </li>
+        <li id="art">
+          <a href="#artSection" class="Level_1" id="artLink">Art</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ================= FOOTER NAVIGATION (FULL WIDTH, HORIZONTAL BUTTONS) ================= -->
+    <footer
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        background: none;
+        z-index: 1000;
+        padding: 0.2rem 0 0.3rem 0;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+      "
+    >
+      <nav
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1.1em;
+          width: 100%;
+          font-size: 0.7rem;
+          background: none;
+        "
+        aria-label="Footer navigation"
+      >
+        <a href="#about" style="background: none; padding: 0 0.2em">About</a
+        >&middot;
+        <a href="#contact" style="background: none; padding: 0 0.2em">Contact</a
+        >&middot;
+        <a
+          href="https://mirror.xyz/0xAd257f1CD206AB468a437225B344C6beC3Ef70C5"
+          style="background: none; padding: 0 0.2em"
+          >Mirror</a
+        >
+      </nav>
+    </footer>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="about container content" id="about" style="display: none; text-align: center">
+      <h2>About Me</h2>
+      <p>I'm Matheus Camilleri - a creative systems designer working at the intersection of art, 
+        tech, and strategy. My portfolio shows how I build frameworks that evolve into brands, 
+        studios, and collaborative ecosystems.</p><br>
+      <p><strong>What I love creating:</strong> VFX videos, music/art videos, worldbuilding, creative direction, visual art.</p>
+      <p><strong>Industries I want to work in:</strong> Web3, entertainment, gaming, AI art, natural design.</p><br><br>
+      <h2>What If You Had $22 Million?</h2>
+  <p>I’d build a multi-studio creative ecosystem with shared infrastructure: a global content network through Mangosalad,
+     decentralized grants and artist licensing through Arthouse, and community-powered landscapes
+      through Good Dirt. I’d create replicable systems that make artists iconic, not just seen.</p>
+
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section
+      class="contact container content"
+      id="contact"
+      style="display: none"
+    >
+      <h2>Contact</h2>
+      <a href="mailto:matheusj.camil@gmail.com">matheusj.camil@gmail.com</a>
+      <ul class="contact-links">
+        <li>
+          <a
+            href="https://www.instagram.com/2.24.2004"
+            target="_blank"
+            rel="noopener"
+            >Instagram</a
+          >
+        </li>
+
+        <!-- Add more social links as needed -->
+      </ul>
+    </section>
+
+    <!-- ================= PROJECT SECTIONS ================= -->
+
+    <!-- STUDIO PUBLISHING FRAMEWORK -->
+    <section class="content container" id="studio" style="display: none">
+      <div class="project-images">
+        <div class="img-block">
+          <img
+            src="./assets/images/SPF/Platform_Layout.png"
+            alt="Layout of the content management system"
+          />
+          <div class="img-caption">Layout of the content management system</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./assets/images/SPF/MmTV.png"
+            alt="TV episode intro animation"
+          />
+          <div class="img-caption">TV episode intro animation</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./assets/images/SPF/Mmagazine_Cover.png"
+            alt="Yearly magazine cover 1"
+          />
+          <div class="img-caption">Yearly magazine cover 1</div>
+        </div>
+      </div>
+      <div class="description-box">
+        <h2>Studio Publishing Framework</h2>
+        <p>
+          <i
+            >A comprehensive content management system designed for creative
+            studios</i
+          >
+        </p>
+        <SECTION><pre> 
+_____________________________________________________________________________________
+
+                          +------------------------+
+                          |     CREATION INPUT     |
+                          +------------------------+
+                          | Artists (Submissions & |
+                          |     Interviews)        |
+                          |  Community (Prompts)   |
+                          +------------------------+
+                                      |
+                                      v
+                          +------------------------+
+                          |     CORE MODULES       |
+                          +------------------------+
+                          | - Magazine             |
+                          | - TV Episodes          |
+                          | - Social Content       |
+                          | - Artist Directory     |
+                          +------------------------+
+                                      |
+                                      v
+                          +------------------------+
+                          |       USER FLOW        |
+                          +------------------------+
+                          | Submit → Curate → Drop |
+                          +------------------------+
+                        ______________|______________
+                        |             |             |     
+                        v             v             v     
+                  +----------+  +-----------+  +-------------+
+                  | GROWTH   |  | REVENUE   |  | REPLICATION |
+                  +----------+  +-----------+  +-------------+
+                  | Fans     |  | Sponsors  |  | Fork/Remix  |
+                  | Collabs  |  | Brokering |  | New Studios |
+                  +----------+  +-----------+  +-------------+
+                        \\           |             //
+                         \\          |            //
+                          \\_________|___________//
+                                     v
+                      +-------------------------------+
+                      |     COMMUNITY PARTICIPATION   |
+                      +-------------------------------+
+                      | - React to drops              |
+                      | - Share & repost              |
+                      | - Remix content               |
+                      | - Submit new prompts          |
+                      | - Join creator circle         |
+                      +-------------------------------+
+                                      |
+                                      v
+                          (Back to CREATION INPUT)
+
+
+_____________________________________________________________________________________
+
+
+</pre></SECTION>
+
+        <p>
+          I designed Mangosalad to scale - not just as a brand, but as a
+          repeatable publishing system. It organizes art across formats: curated
+          social posts, seasonal magazine issues, and longform “TV” episodes.
+          Contributors can plug in, audiences can tune in, and everything is
+          built for modular evolution.
+        </p>
+
+        <h3><strong>Design Approach:</strong></h3>
+        <p>
+          The branding is intentionally fluid - logos morph to match themes,
+          content structures follow the rhythm of real publishing, like
+          recurring magazine issues or scheduled content drops, and each issue
+          has its own flavor while staying recognizable.
+        </p>
+
+        <h3><strong>Why It Matters:</strong></h3>
+        <p>
+          Mangosalad isn’t just a brand. It’s a container. This framework lets
+          ideas take shape without friction - and gives artists a system to
+          belong to without being boxed in.
+        </p>
+      </div>
+    </section>
+
+    <!-- GOOD DIRT CO. SYSTEM -->
+    <section class="content container" id="gooddirt" style="display: none">
+      <div class="project-images">
+        <div class="img-block">
+          <img src="./assets/images/GDC/Logo.png" alt="Logo" />
+          <div class="img-caption">Logo</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./assets/images/GDC/Mushroom_Production_System.JPG"
+            alt="Modular mushroom production chamber"
+          />
+          <div class="img-caption">Modular mushroom production chamber</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./assets/images/GDC/Medicinal_Lionsmane_Mushrooms.JPG"
+            alt="Medicinal Lionsmane mushrooms"
+          />
+          <div class="img-caption">Medicinal Lionsmane mushrooms</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./assets/images/GDC/Locally_Grown_Market_Stall.JPG"
+            alt="Local farmers market mushroom stall"
+          />
+          <div class="img-caption">Local farmers market mushroom stall</div>
+        </div>
+      </div>
+      <div class="description-box">
+        <h2>Good Dirt Co. System</h2>
+        <p>
+          <i>A creative system rooted in ecology, rhythm, and sacred design.</i>
+        </p>
+        <SECTION><pre>
+_____________________________________________________________________________________
+
+                                  GOOD DIRT CO.
+                            [ Rooted Design System ]
+
+                      (Input from Designers + Landowners)
+                                        ↓
+                                ▒▒▒ LAND STUDY ▒▒▒
+                                ↓              ↓
+                      +------------+          +----------+
+                      | Ecological |          | Visual   |
+                      | Function   |          | Harmony  |
+                      +------------+          +----------+
+                                        ↓
+                               ▓▓▓ CORE SYSTEMS ▓▓▓
+                              | Garden Layouts     |
+                              | Mushroom Chambers  |
+                              | Local Product Flow |
+                              +--------------------+
+                                        ↓
+                              Community Build Days
+                                        ↓
+                            Local Markets + Online Kits
+                                        ↓
+                        Community Feedback & Media Uploads
+                                        ↓
+                        New Designs Seeded for Next Season
+
+ _____________________________________________________________________________________
+
+        </pre></SECTION>
+        <p>
+          Good Dirt Co. is a living design system rooted in nature, rhythm, and
+          community. I designed it to blend landscape architecture, ecological
+          production, and creative marketing into a single experience - one that
+          could be farmed, sold, and lived in.
+        </p>
+        <h3><strong>Role:</strong></h3>
+        <p>Founder, Creative Systems Designer, Creative Director.</p>
+        <h3><strong>Design Approach:</strong></h3>
+        <p>
+          Design begins with deep assessment. Production follows natural rhythm
+          and form. Marketing becomes worldbuilding - every product, story, and
+          visual points to a unified philosophy: beauty is grown, not bought.
+        </p>
+        <h3><strong>Why It Matters:</strong></h3>
+        <p>
+          This was my first full-scale attempt at designing for the physical
+          world. I wasn’t just building a brand. I was shaping space - and
+          trying to make the land feel sacred again.
+        </p>
+      </div>
+    </section>
+
+    <!-- VR EXPERIENCE SYSTEM -->
+    <section class="content container" id="vrxp" style="display: none">
+      <div class="project-images">
+        <div class="img-block">
+          <img src="./assets/images/VRXP/VRXP1.png" alt="Completed VR Demo" />
+          <div class="img-caption">Completed VR Demo</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./assets/images/VRXP/VRXP2.png"
+            alt="Sample VR Experience 1"
+          />
+          <div class="img-caption">Sample VR Experience 1</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./assets/images/VRXP/VRXP3.png"
+            alt="Sample VR Experience 2"
+          />
+          <div class="img-caption">Sample VR Experience 2</div>
+        </div>
+      </div>
+      <div class="description-box">
+        <h2>VR Experience System</h2>
+        <p>
+          <i>Designing immersive therapeutic spaces using AI and memory.</i>
+        </p>
+        <SECTION><pre>
+  _____________________________________________________________________________________   
+
+                              VR EXPERIENCE SYSTEM
+                        [ Memory-Based Therapeutic Design ]
+                
+                        ┌────────────────────────────────┐
+                        │ Patient Memory (Scan + Upload) │
+                        └────────────────────────────────┘
+                                      ↓
+                              Therapist Adjustments
+                                      ↓
+                            +----------------------+
+                            | Emotional Parameters |
+                            +----------------------+
+                                      ↓
+                            ┌─────────────────────┐
+                            │ AI-Generated Space  │
+                            └─────────────────────┘
+                                      ↓
+                          ◉ Personalized VR Session ◉
+                          (Emotional Companion Guides)
+                  
+                                      ↓
+                              +--------------------+
+                              | Comfort & Healing  |
+                              +--------------------+
+                                      ↓
+                        Community: Share Memories & Vote
+                                      ↓
+                        System evolves with each use loop
+
+    _____________________________________________________________________________________
+ 
+        </pre></SECTION>
+        <p>
+          This project reimagines therapy through immersive storytelling. I
+          built a system that transforms Gaussian Splatting scans into realistic
+          3D environments, supported by an emotionally intelligent AI companion.
+          The goal: make memory feel inhabitable, and support feel personal.
+        </p>
+        <h3><strong>Role:</strong></h3>
+        <p>
+          Creative Systems Designer, Technical Researcher, Emotional UX
+          Designer.
+        </p>
+        <h3><strong>Design Approach:</strong></h3>
+        <ol>
+          <li>Photoreal environment reconstruction using Gaussian Splatting</li>
+          <li>Emotional AI chatbot with backstory, memory, and tone</li>
+          <li>Configurable experience templates for therapists and users</li>
+        </ol>
+        <br />
+        <h3><strong>Why It Matters:</strong></h3>
+        <p>
+          This was interaction as healing. It combined cutting-edge tech with
+          deep human intention - designing not for attention, but for comfort,
+          care, and connection.
+        </p>
+      </div>
+    </section>
+
+    <!-- EMPORIUM STRATEGY -->
+    <section class="content container" id="emporium" style="display: none">
+      <div class="project-images">
+        <div class="img-block">
+          <img
+            src="./assets/images/EMP/Client_Experience_Guide.png"
+            alt="Client Experience Guide"
+          />
+          <div class="img-caption">Client Experience Guide</div>
+        </div>
+      </div>
+      <div class="description-box">
+        <h2>EMPORIUM Strategy</h2>
+        <p>
+          <i>Elevating material craftsmanship through brand narrative.</i>
+        </p>
+        <p>
+          A rebrand and sales strategy system for a boutique stone fabrication
+          studio. I crafted their narrative direction, event identity, and
+          online experience to reflect both artistry and luxury service.
+        </p>
+        <h3><strong>Role:</strong></h3>
+        <p>
+          Creative Strategist & Director. I developed their positioning, visual
+          storytelling, and Client Experience Guide.
+        </p>
+        <h3><strong>Design Approach:</strong></h3>
+        <p>
+          Emporium wanted to evolve and connect with a younger, design-conscious
+          audience. I repositioned their voice and visuals, using Illustrator to
+          craft a refined, editorial identity and reshaping their site to feel
+          like a design studio, not just a fabricator.
+        </p>
+        <h3><strong>Why It Matters:</strong></h3>
+        <p>
+          This project proved that even raw materials like stone need human
+          storytelling. It pushed me to find elegance in sales - and discover
+          the importance of creative direction.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= BRAND SECTIONS ================= -->
+
+    <!-- MANGOSALAD BRAND -->
+    <section
+      class="content container"
+      id="mangosaladBrand"
+      style="display: none"
+    >
+      <div class="project-images">
+        <div class="img-block">
+          <img
+            src="./"
+            alt=""
+          />
+          <div class="img-caption"></div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./"
+            alt=""
+          />
+          <div class="img-caption"></div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./"
+            alt=""
+          />
+          <div class="img-caption"></div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./"
+            alt=""
+          />
+          <div class="img-caption"></div>
+        </div>
+      </div>
+      <div class="description-box">
+        <h2>Mangosalad</h2>
+        <p>
+          <i>Experimental studio for digital entertainment & weird creative tech</i
+          >
+        </p>
+        <p>
+          Mangosalad is my studio and brand. It functions as a modular publishing system
+           with magazine issues, curated art posts, and visual experiments. It’s a house
+            for creative chaos and collaboration.
+        </p>
+        <h3><strong>Role:</strong></h3>
+        <p>Founder, Creative Director</p>
+        <h3><strong>Design Approach:</strong></h3>
+        <p>Fluid branding, seasonal identity, and content-as-architecture.</p>
+        <h3><strong>Why It Matters:</strong></h3>
+        <p>It shows how systems can enable expression, not limit it. This is art as infrastructure.</p>
+        <p>
+          <a
+            href="https://www.instagram.com/mmmmmsalad/"
+            target="_blank"
+            rel="noopener"
+          >
+            @mmmmmsalad
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ARTHOUSE BRAND -->
+    <section class="content container" id="arthouse" style="display: none">
+      <div class="project-images">
+        <div class="img-block">
+          <img
+            src=".x"
+            alt="x"
+          />
+          <div class="img-caption">x</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./x"
+            alt="x"
+          />
+          <div class="img-caption">x</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./x"
+            alt="x"
+          />
+          <div class="img-caption">x</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./x"
+            alt="x"
+          />
+          <div class="img-caption">x</div>
+        </div>
+      </div>
+      <div class="description-box">
+        <h2>Arthouse</h2>
+        <p>
+          <i
+            >Decentralized platform for digital creators & studios</i
+          >
+        </p>
+        <p>
+          Arthouse is a DAO system I designed to support on-chain creative ventures. Artists earn governance and funding through contribution, not clout. It links studios like Mangosalad into a shared ecosystem.
+        </p>
+        <h3><strong>Role:</strong></h3>
+        <p>Founder, Curator</p>
+        <h3><strong>Design Approach:</strong></h3>
+        <p>Modular DAO logic, reputation-based systems, spotlight voting.</p>
+        <h3><strong>Why It Matters:</strong></h3>
+        <p>It’s my attempt to reshape how art is made, funded, and owned in the digital age</p>
+      </div>
+    </section>
+
+    <!-- NEUROLINE BRAND -->
+    <section class="content container" id="neuroline" style="display: none">
+      <div class="project-images">
+        <div class="img-block">
+          <img
+            src="./x"
+            alt="x"
+          />
+          <div class="img-caption">x</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./x"
+            alt="x"
+          />
+          <div class="img-caption">x</div>
+        </div>
+        <div class="img-block">
+          <img
+            src="./x"
+            alt="x"
+          />
+          <div class="img-caption">x</div>
+        </div>
+        <div class="img-block">
+          <img
+            src=".x"
+            alt="x"
+          />
+          <div class="img-caption">x</div>
+        </div>
+      </div>
+      <div class="description-box">
+        <h2>Neuroline</h2>
+        <p>
+          <i
+            >AI systems that scale creative businesses</i
+          >
+        </p>
+        <p>
+          Neuroline is an agency I co-founded. We build no-code/low-code automation systems for creators and small businesses, using AI agents and intelligent workflows.
+        </p>
+        <h3><strong>Role:</strong></h3>
+        <p>Co-founder, Creative Director & Strategist.</p>
+        <h3><strong>Design Approach:</strong></h3>
+        <p>UX-focused automation, human-centered AI, clear onboarding paths.</p>
+        <h3><strong>Why It Matters:</strong></h3>
+        <p>It’s about giving entrepreneurs access to powerful, easy-to-use tech that saves time and boosts growth.</p>
+      </div>
+    </section>
+
+    <!-- ================= ART SECTION WITH GRID GALLERY ================= -->
+    <section class="content container" id="artSection" style="display: none">
+      <div class="grid-gallery">
+        <img
+          src="./assets/images/Art/betterThanYesterday.JPEG"
+          alt="Better than yesterday, painting by mjc"
+        />
+        <img
+          src="./assets/images/Art/brazilianExperiment.avif"
+          alt="Experiment in Brazil, painting by mjc"
+        />
+        <img
+          src="./assets/images/Design/jichaelJackson.JPEG"
+          alt="Jichael Jackson, digital camera edit by mjc"
+        />
+        <img
+          src="./assets/images/Art/Skull.JPEG"
+          alt="Mixed media monster, artwork by mjc"
+        />
+        <img
+          src="./assets/images/Art/loveYouRainbowKid.avif"
+          alt="Love You Rainbow Kid, painting by mjc"
+        />
+        <img
+          src="./assets/images/Art/allMyFriends.avif"
+          alt="All my friends, painting by mjc"
+        />
+        <img
+          src="./assets/images/Art/arcticCircle.avif"
+          alt="Arctic Circle, painting by mjc"
+        />
+        <img
+          src="./assets/images/Mangosalad/L.JPEG"
+          alt="Lola facing right, painting by mjc"
+        />
+        <img
+          src="./assets/images/Mangosalad/tinme.JPEG"
+          alt="Tinme, portrait by mjc"
+        />
+        <img
+          src="./assets/images/Mangosalad/mjc.JPEG"
+          alt="mjc in Kill The Third Person, photo"
+        />
+        <img
+          src="./assets/images/Mangosalad/R.JPEG"
+          alt="Lola facing left, painting by mjc"
+        />
+        <img
+          src="./assets/images/Design/bubblegum.png"
+          alt="Bubblegum, digital artwork by mjc"
+        />
+        <img
+          src="./assets/images/Design/xRay.avif"
+          alt="XRay, digital collage by mjc"
+        />
+        <img src="./assets/images/Art/ChoirPractice.avif" alt="Choir Practice, digital artwork by mjc">
+        
+        <img
+          src="./assets/images/Design/gold.avif"
+          alt="M drops, digital art by mjc"
+        />
+        <img
+          src="./assets/images/Design/bookCover.avif"
+          alt="Future book cover, design by mjc"
+        />
+        <img
+          src="./assets/images/Design/noire.png"
+          alt="Noire, digital artwork by mjc"
+        />
+      </div>
+      <div class="description-box">
+        <h2>Art</h2>
+        <p>
+          <i
+            >A collection of personal works exploring themes of identity,
+            memory, and digital consciousness</i
+          >
+        </p>
+        <p>
+          These pieces represent an ongoing investigation into how technology
+          shapes human experience and perception.
+        </p>
+        <h3><strong>Medium:</strong></h3>
+        <p>Mixed Media, Digital Painting, Installation</p>
+        <h3><strong>Themes:</strong></h3>
+        <p>Identity, Memory, Digital Consciousness</p>
+        <p>
+          <a
+            href="https://www.instagram.com/2.24.2004/"
+            target="_blank"
+            rel="noopener"
+          >
+            https://www.instagram.com/2.24.2004/
+          </a>
+        </p>
+      </div>
+    </section>
+    <script defer src="script.js"></script>
+  </body>
+</html>
