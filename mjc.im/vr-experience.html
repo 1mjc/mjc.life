@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VR AI Experience: a home you can walk into and talk to | mjc</title>
+<meta name="description" content="A VR memory experience for a person living with dementia: Gaussian-splat scans of a real home in Unreal Engine, with a talking AI MetaHuman built with Convai and ElevenLabs, packaged for Meta Quest.">
+<meta name="author" content="Matheus Camilleri">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="mjc">
+<meta property="og:title" content="VR AI Experience: a home you can walk into and talk to | mjc">
+<meta property="og:description" content="A VR memory experience for a person living with dementia: Gaussian-splat scans of a real home in Unreal Engine, with a talking AI MetaHuman built with Convai and ElevenLabs, packaged for Meta Quest.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ffffff'/%3E%3Ctext x='16' y='23' font-family='Garamond,Georgia,serif' font-size='20' text-anchor='middle' fill='%23111111'%3Emjc%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/js/mjc.js" defer></script>
+<script src="assets/js/art.js" defer></script>
+</head>
+<body>
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+<filter id="ink-edge" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="3" seed="7" result="warp"/>
+<feDisplacementMap in="SourceGraphic" in2="warp" scale="22" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="3" result="grain"/>
+<feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  16 0 0 0 -2.5" result="holes"/>
+<feComposite in="rough" in2="holes" operator="in"/>
+</filter>
+<filter id="ink-rough" x="-6%" y="-6%" width="112%" height="112%">
+<feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="11" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+</filter>
+<filter id="ink-text" x="-4%" y="-8%" width="108%" height="116%">
+<feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="2" seed="2" result="w"/>
+<feDisplacementMap in="SourceGraphic" in2="w" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+</filter>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="mjc, home">mjc</a>
+<nav aria-label="Main"><ul><li><a href="work.html" aria-current="page">work</a></li><li><a href="services.html">brand work</a></li><li><a href="about.html">about</a></li><li><a href="contact.html">say hello</a></li></ul></nav>
+</header>
+<main id="main">
+<article>
+<div class="wrap">
+<a class="back" href="index.html#main">← back to the map</a>
+<div class="island t-vr">
+<header class="isl-head"><p class="label">Academic co-op</p><h1>VR AI Experience</h1><p class="tagline">A real home, rebuilt in VR for someone living with dementia, with an AI version of her grandson waiting inside to talk.</p></header><dl class="meta"><div><dt>Type</dt><dd>Co-op research project with Jonathan Parker, visiting professor from Wales (a working prototype, not a clinical product)</dd></div><div><dt>My role</dt><dd>Everything in the build: environment, avatar, AI, voice and VR packaging</dd></div><div><dt>Tools</dt><dd>Unreal Engine, Gaussian Splatting, MetaHuman, Convai, ElevenLabs, Meta Quest</dd></div><div><dt>Status</dt><dd>Finished demo; never published</dd></div></dl><div class="shots cols-3"><figure class="shot reveal" data-hide-missing><img src="assets/images/VRXP/VRXP1.png" alt="Screen from the completed VR demo" loading="lazy" decoding="async"><figcaption>The finished demo</figcaption></figure><figure class="shot reveal" data-hide-missing><img src="assets/images/VRXP/VRXP2.png" alt="The scanned house rebuilt in Unreal Engine, scene one" loading="lazy" decoding="async"><figcaption>Inside the house</figcaption></figure><figure class="shot reveal" data-hide-missing><img src="assets/images/VRXP/VRXP3.png" alt="The scanned house rebuilt in Unreal Engine, scene two" loading="lazy" decoding="async"><figcaption>Inside the house</figcaption></figure></div><figure class="diagram reveal"><p class="label">How the pieces fit</p><div class="scroll" role="region" aria-label="How the pieces fit" tabindex="0"><pre aria-hidden="true"> SPLAT SCANS ─────┐
+ (home + town)    │
+                  ▼
+ METAHUMAN ──► UNREAL ENGINE ◄── CONVAI
+ (Jonathan)       ▲             (her memories)
+                  │
+ ELEVENLABS ──────┘
+ (his voice)
+                  │
+                  ▼
+          META QUEST HEADSET
+   walk the house · talk to him out loud</pre></div><p class="sr-only">Gaussian-splat scans of the home, a MetaHuman of Jonathan, Convai conversation primed with his grandmother&#x27;s memories and an ElevenLabs clone of his voice all come together in Unreal Engine, packaged as an app for a Meta Quest headset where you walk the house and talk to him.</p></figure><div class="rows"><section class="row reveal"><h2>How it started</h2><div class="txt"><p>While I was looking for a co-op at Humber, Jonathan Parker, a professor visiting from Wales, was in town with his students, researching AI and Gaussian Splatting. I went up and talked to him. He had an idea he wanted to build: an experience for people living with dementia, starting with his own grandmother.</p><p>It ended up being the two of us. Jonathan brought the research and the scans. I built it.</p></div></section><section class="row reveal"><h2>What I built</h2><div class="txt"><ol><li><strong>The house.</strong> Jonathan gave me Gaussian Splatting scans of his grandmother's home and her hometown. I assembled them in Unreal Engine into a space you can actually walk through, close to photoreal because it's made from the real place.</li><li><strong>Jonathan.</strong> I photographed his face and rebuilt him as a MetaHuman, a realistic digital person, so the one waiting in the house would be her grandson.</li><li><strong>His mind, for this one subject.</strong> Using Convai, a conversational AI plugin for Unreal, we gave the avatar the context of his grandmother's memories: her home, her town, her stories.</li><li><strong>His voice.</strong> With ElevenLabs, we cloned his voice from a recording, so the avatar answers in it.</li><li><strong>The headset.</strong> I put it all together and packaged it as an app that runs on a Meta Quest.</li></ol></div></section><section class="row reveal"><h2>Inside the headset</h2><div class="txt"><p>You put it on and you're standing in her house, an almost exact copy of the scan. Walk through it and you find Jonathan. Say anything out loud, through the headset's microphone, and he answers you in his own voice, about his hometown and his grandmother's house, as if he were really there.</p><p>The point was never the technology. It was to hand someone a familiar place and a familiar face, and let the memories come back on their own.</p></div></section><section class="row reveal"><h2>The hardest part</h2><div class="txt"><p>Not the AI, and not the scans. Getting all of it into one file a Meta Quest would actually run. Gaussian splats, a MetaHuman, live conversation and voice are heavy on their own, and together they kept breaking the build. It took weeks of troubleshooting before it finally ran on the headset.</p></div></section><section class="row reveal"><h2>Looking back</h2><div class="txt"><p>Jonathan thought it was brilliant, and it's one of the things I'm proudest of. My regret is that I kept it quiet. I didn't publish it, share the process or put the workflow out into the world, and I think it was genuinely new.</p><p>We talked about turning the workflow into more experiences like this one, for more people and more places. I'd work with him again in a heartbeat. This page is me finally showing it.</p></div></section></div>
+</div>
+<nav class="next" aria-label="Next project"><a class="next-link" href="mangosalad.html" data-open="mango"><span class="label">Next</span><span class="next-title">Mangosalad</span></a></nav>
+</div>
+</article>
+</main>
+<footer class="site-footer">
+<nav aria-label="Main"><ul><li><a href="work.html">work</a></li><li><a href="services.html">brand work</a></li><li><a href="about.html">about</a></li><li><a href="contact.html">say hello</a></li></ul></nav>
+<p class="legal"><a href="mailto:matheusj.camil@gmail.com">matheusj.camil@gmail.com</a> &middot; &copy; 2026 mjc</p>
+</footer>
+</body>
+</html>

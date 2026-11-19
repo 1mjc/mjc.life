@@ -1,0 +1,8 @@
+Self-hosted typefaces (latin subset, woff2, from Fontsource):
+EB Garamond (site)          SIL OFL 1.1     Bodoni Moda (Emporium)       SIL OFL 1.1
+Shrikhand + Fredoka (Mango Salad)  SIL OFL 1.1     Unbounded + Outfit (Visit Vice Versa)  SIL OFL 1.1
+Space Mono (Good Dirt Co.)  SIL OFL 1.1     Barlow Condensed (Artprojects)  SIL OFL 1.1
+Syncopate + Jost (VR Experience)  SIL OFL 1.1     Rubik Distressed (Art)   SIL OFL 1.1
+Special Elite (Art)         Apache 2.0      Limelight + Karla (Video)    SIL OFL 1.1
+Licence text for the OFL fonts: see LICENSE.txt in this folder.
+Micro 5 Charted (Artprojects name)  SIL OFL 1.1
