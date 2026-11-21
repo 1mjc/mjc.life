@@ -1,0 +1,123 @@
+# ============================================================
+#  mjc — all the words that aren't inside a project.
+#  Edit, save, then run:  python3 _source/build.py
+#
+#  Format:  [section]  then   key: value   (one line each)
+#           lines starting with "- " are list items, parts split by " | "
+#           *italic*   **bold**   [link text](page.html)
+#           Lines starting with # are notes to yourself and are ignored.
+# ============================================================
+
+[site]
+email: matheusj.camil@gmail.com
+name: Matheus Camilleri
+year: 2026
+title: mjc | Matheus Camilleri
+description: Matheus Camilleri (mjc), a Toronto multimedia designer and developer working in brand identity, creative direction, web and video, plus worlds, platforms and art of his own.
+job_title: Multimedia designer & creative director
+instagram_note:
+
+# top menu, in order:  label | page
+[nav]
+- work | work.html
+- brand work | services.html
+- about | about.html
+- say hello | contact.html
+
+# the big "mjc" has its own highlighted line under it, then a quieter one
+[hero]
+# The black highlighted line right under "mjc". This is the one sentence that has to win the room.
+tagline: I build brands people want to be part of.
+# Other directions, if you want to try them (paste one over the line above):
+#   I turn ideas into brands people want to engage with.
+#   Identity, direction and presence for businesses with ambition.
+#   I make brands into places people want to be.
+sub: Matheus Camilleri. Multimedia designer and developer, Humber Polytechnic grad. I work across brand identity, creative direction, web, video and AI-assisted production, taking ideas from concept to finished thing. Below that is everything I build when nobody's asking: worlds, platforms, art. Poke around.
+
+# The map. One branch per column on a wide screen, in this order:  id | label | small caption | optional link
+# A project picks its branch with "branch: <id>" at the top of its file in content/projects.
+[branches]
+- worlds | worlds | places I'm building
+- ads | brands | the doorway: identity, direction and presence for businesses | services.html
+- platforms | platforms | systems other people can build on
+- experiments | experiments | things I make to find out
+- art | art | made for no one in particular
+
+[map]
+label: A map of my work
+
+[home_closing]
+heading: Got something that needs to be seen? Or something here caught your eye?
+button: say hello
+
+[work]
+seo_title: Work | mjc
+seo_description: All of it: a client rebrand, Mangosalad, Visit Vice Versa, Good Dirt Co., Artprojects, a VR prototype, art and video.
+label: Work
+title: Everything
+intro: The map on the home page, as a list. Each one is marked as client work, my own, an academic project or just mine.
+
+[services]
+seo_title: Brand work | mjc
+seo_description: Identity, creative direction and digital presence for ambitious businesses, from one person, idea to finished thing.
+label: Brand work
+title: What I bring to a team.
+intro: I work out who a brand is, how it should look and feel, and how it shows up online. Then I make it: the identity, the materials, the pages and the content. I can own something start to finish, and I'm just as useful as one part of a bigger team.
+# what I do:  title | text
+offers:
+- Identity | Positioning, tone of voice, logos, type and colour systems, and the rules that keep them consistent.
+- Creative direction | Moodboards, campaign concepts and art direction that hold one look and feel across every touchpoint.
+- Digital presence | Websites and landing pages designed and hand-built, plus social systems that look like the brand, not a template.
+- Content and video | Short-form, launch pieces, music videos and VFX, from storyboard to final cut.
+- AI-assisted production | Faster concepting, more variations and small workflow automations, with a person making the calls on taste.
+why_heading: Why it works
+# title | text
+why:
+- One person, no handoffs | I can carry an idea from first sketch to final file, so I understand what happens before and after my part of a project.
+- Range, so one idea goes further | Brand, design, video, web and a little code. One concept can become the identity, the page and the content, which helps anywhere a campaign has to live in more than one place.
+- I build my own | Mangosalad and Visit Vice Versa weren't briefs; I started them. Building my own things taught me what makes people want to join in, and how to ship without being asked.
+start_heading: Where I can contribute
+# title | text
+starts:
+- Creative development | Concepts, moodboards and campaign ideas, from first brief to a direction a team can run with.
+- Multimedia and content production | Video, motion and social assets, made quickly and on-brand.
+- Digital design and experiences | Websites, landing pages and interactive work, designed and built.
+start_note: Open to part-time creative and marketing opportunities in Toronto and the GTA, and still happy to talk about freelance projects.
+solo: I've mostly worked independently. Now I'm looking for a team where I can contribute from day one and learn from people who've been doing this longer than I have.
+button: say hello
+back_note: Want to see what I make when nobody's asking? [Back to the map.](index.html#main)
+
+[about]
+seo_title: About | mjc
+seo_description: Matheus Camilleri: brand identity and creative direction on the surface, a wider web of worlds, platforms, experiments and art underneath.
+label: About
+title: A web, not a line.
+big: I'm Matheus Camilleri. I studied Multimedia Design and Development at Humber Polytechnic, and I've been building my own projects ever since.
+# heading | text | (optional) quote   -> add the word quote as a third part to set it as a pull-quote
+sections:
+- How it connects | My work looks scattered until you zoom out. I paint, I make VFX and music videos, I build worlds, businesses and platforms. They're branches of the same thing: I like deciding how something should feel, then building everything it needs to feel that way.
+- Working together | I'm direct, I move quickly, and I take feedback well and run with it. Say hello first; scope and cost come after.
+- The doorway | The easiest way to work with me is brand work: identity, creative direction and digital presence. It's real work I'm good at, and it keeps the rest of the map growing. If you want to go deeper, [the map](index.html#main) goes deeper.
+- If I had $22 million | I'd build a multi-studio creative ecosystem with shared infrastructure: a global content network through Mangosalad, decentralized grants and artist licensing through Artprojects, and community-powered landscapes through Good Dirt. I'd make replicable systems that make artists iconic, not just seen. | quote
+button: say hello
+
+[contact]
+seo_title: Say hello | mjc
+seo_description: Get in touch with mjc about a project, or just to talk.
+label: Contact
+title: Say hello.
+intro: About a role, a project, or something here. A few lines is plenty. Open to part-time creative and marketing opportunities in Toronto and the GTA.
+form_note: Or use this and it'll open an email to me, already written.
+name_label: Your name
+brand_label: Brand or company (if there is one)
+message_label: What are you working on?
+message_placeholder: The brand, the goal, anything already decided, or just hi.
+submit: open in email
+fallback: If your email app didn't open, send it to
+nojs: This needs JavaScript. Please email
+
+[project_pages]
+back: ← back to the map
+next_label: Next
+end_label: That's the map
+end_title: Back to the start
