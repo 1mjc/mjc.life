@@ -15,8 +15,11 @@ meta:
   Type: My own venture, self-initiated (not client work)
   My role: Founder and creative director
   Formats: Monthly themes, featured artists, a yearly magazine, TV episodes
+  Active since: 2020
+  Made so far: One magazine, about six campaigns across the brand's phases, a charter for my media vision and six pieces of creative writing
   Status: On pause
   Instagram: [@mmmmmsalad](https://www.instagram.com/mmmmmsalad/)
+  Writing: [paragraph.com/@mangosalad](https://paragraph.com/@mangosalad)
 shots:
   - SPF/Mmagazine_Cover.png | Mangosalad yearly magazine cover | The yearly magazine (one copy printed)
   - SPF/MmTV.png | Mangosalad TV episode intro animation | TV episode intro animation
@@ -25,7 +28,7 @@ shots:
 
 ## How it started
 
-Mangosalad is my oldest project. It began as an Instagram identity where I posted my digital art and animations, and grew into something I wanted the world to be part of.
+Mangosalad is my oldest project; I started it in 2020. It began as an Instagram identity where I posted my digital art and animations, and grew into something I wanted the world to be part of.
 
 ## Designing the feed, not the post
 
@@ -63,4 +66,4 @@ A magazine isn't a book. It has sections and formats that repeat, and that's wha
 
 ## Where it is
 
-On pause. It hasn't found its audience yet, but I think it's one of my best ideas and it will have its day. The next move is working out where it's genuinely useful to people, and getting them on board.
+On pause. So far it's one magazine, about six campaigns as the brand went through its phases, a charter for my media vision, and six pieces of creative writing that imagine what it's like to discover Mangosalad as a new member. They're on [Paragraph](https://paragraph.com/@mangosalad). No artists have been featured yet; the system is built and waiting for its first. It hasn't found its audience yet, but I think it's one of my best ideas and it will have its day. The next move is working out where it's genuinely useful to people, and getting them on board.

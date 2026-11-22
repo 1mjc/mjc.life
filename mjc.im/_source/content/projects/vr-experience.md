@@ -15,7 +15,10 @@ meta:
   Type: Co-op research project with Jonathan Parker, visiting professor from Wales (a working prototype, not a clinical product)
   My role: Everything in the build: environment, avatar, AI, voice and VR packaging
   Tools: Unreal Engine, Gaussian Splatting, MetaHuman, Convai, ElevenLabs, Meta Quest
-  Status: Finished demo; never published
+  Year: 2025
+  Status: Finished demo
+videos:
+  - The finished demo | https://youtu.be/HvrQfpE-ktQ | 2025 | The experience running, start to finish.
 shots:
   - VRXP/VRXP1.png | Screen from the completed VR demo | The finished demo
   - VRXP/VRXP2.png | The scanned house rebuilt in Unreal Engine, scene one | Inside the house
@@ -67,6 +70,6 @@ Gaussian-splat scans of the home, a MetaHuman of Jonathan, Convai conversation p
 
 ## Looking back
 
-Jonathan thought it was brilliant, and it's one of the things I'm proudest of. My regret is that I kept it quiet. I didn't publish it, share the process or put the workflow out into the world, and I think it was genuinely new.
+Jonathan thought it was brilliant, and it's one of the things I'm proudest of. My regret is that I kept it quiet for so long. I didn't share the process or put the workflow out into the world, and I think it was genuinely new.
 
 We talked about turning the workflow into more experiences like this one, for more people and more places. I'd work with him again in a heartbeat. This page is me finally showing it.

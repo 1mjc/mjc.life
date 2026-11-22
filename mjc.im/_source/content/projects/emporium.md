@@ -8,17 +8,21 @@ kind: Client work
 name: Emporium
 card: A family stone business, repositioned as a boutique.
 tagline: Turning a word-of-mouth family stone fabricator into a boutique that a younger audience can find, and wants to be part of.
-image: EMP/Client_Experience_Guide.png
+image: EMP/Experience_Guide_Inside.jpg
 seo_title: Emporium: a family stone fabricator, repositioned as a boutique | mjc
 seo_description: Case study: positioning, a client journey map and brand materials for Emporium, a family-run stone fabricator in Woodbridge. Paid client engagement.
 meta:
   Type: Paid client engagement
   The client: A family-run stone fabricator in Woodbridge, Ontario
   My role: Hired as a junior designer; ended up leading strategy and creative direction
+  Year: 2025
   Status: Delivered; never launched
   Tools: Adobe Illustrator
 shots:
-  - EMP/Client_Experience_Guide.png | Page from the Emporium Client Experience Guide | The Client Experience Guide: the client journey, step by step
+  - EMP/Client_Journey_Map.jpg | The Emporium client journey map, from discovery to aftercare | The client journey map: discovery to aftercare
+  - EMP/Experience_Guide_Inside.jpg | Inside spread of the Emporium Experience Guide | The Experience Guide, inside: the journey in three parts
+  - EMP/Experience_Guide_Cover.jpg | Cover and back of the Emporium Experience Guide | The Experience Guide, cover and back
+  - EMP/Brand_Identity.jpg | Emporium brand identity sheet: story, values, tone and slogans | The brand identity: story, values, tone and the line "Designed to endure. Crafted to connect."
 ---
 
 ## The client
@@ -27,7 +31,7 @@ Emporium is a family business that has been cutting stone for a long time, in Wo
 
 They wanted two things: to be seen as a boutique, not a fabricator, and to reach a younger audience through social media and the internet, where they barely existed.
 
-I found the job as a junior designer posting on Humber's student job board. It turned into strategy.
+I found the job through a junior designer posting on Humber's student job board. It turned into strategy.
 
 ## The problem
 
@@ -63,6 +67,7 @@ The client journey in five steps: choose the stone with guidance, design the pie
 ## What I made
 
 - Positioning and narrative: from fabricator to boutique design studio
+- A brand identity: story, values, tone of voice and the line "Designed to endure. Crafted to connect."
 - The Client Experience Guide, a customer journey map (pictured above)
 - New brand materials: posters and banners
 - An event identity

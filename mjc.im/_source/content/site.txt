@@ -13,14 +13,20 @@ email: matheusj.camil@gmail.com
 name: Matheus Camilleri
 year: 2026
 title: mjc | Matheus Camilleri
-description: Matheus Camilleri (mjc), a Toronto multimedia designer and developer working in brand identity, creative direction, web and video, plus worlds, platforms and art of his own.
-job_title: Multimedia designer & creative director
+description: Matheus Camilleri (mjc), a multimedia designer in Vaughan and Toronto working in brand identity, creative direction, web and video, plus worlds, platforms and art of his own.
+job_title: Multimedia designer
 instagram_note:
+linkedin: https://www.linkedin.com/in/matheus-camilleri-b2333a1a2/
+url: https://mjc.im
+# the CV people can download (inside the site folder). The copy on the site has no phone number.
+cv: assets/Matheus-Camilleri-Resume.pdf
+# the picture shown when someone shares a link to the site (1200 x 630, inside assets/images)
+share_image: share.jpg
 
 # top menu, in order:  label | page
 [nav]
 - work | work.html
-- brand work | services.html
+- what I do | services.html
 - about | about.html
 - say hello | contact.html
 
@@ -58,9 +64,9 @@ title: Everything
 intro: The map on the home page, as a list. Each one is marked as client work, my own, an academic project or just mine.
 
 [services]
-seo_title: Brand work | mjc
-seo_description: Identity, creative direction and digital presence for ambitious businesses, from one person, idea to finished thing.
-label: Brand work
+seo_title: What I do | mjc
+seo_description: Identity, creative direction, web, video and AI-assisted production: what Matheus Camilleri brings to a creative or marketing team.
+label: What I do
 title: What I bring to a team.
 intro: I work out who a brand is, how it should look and feel, and how it shows up online. Then I make it: the identity, the materials, the pages and the content. I can own something start to finish, and I'm just as useful as one part of a bigger team.
 # what I do:  title | text
@@ -92,12 +98,12 @@ seo_title: About | mjc
 seo_description: Matheus Camilleri: brand identity and creative direction on the surface, a wider web of worlds, platforms, experiments and art underneath.
 label: About
 title: A web, not a line.
-big: I'm Matheus Camilleri. I studied Multimedia Design and Development at Humber Polytechnic, and I've been building my own projects ever since.
+big: I'm Matheus Camilleri, a multimedia designer in Vaughan and Toronto. I graduated from Multimedia Design and Development at Humber Polytechnic in 2025, and I've been building projects of my own since 2020.
 # heading | text | (optional) quote   -> add the word quote as a third part to set it as a pull-quote
 sections:
 - How it connects | My work looks scattered until you zoom out. I paint, I make VFX and music videos, I build worlds, businesses and platforms. They're branches of the same thing: I like deciding how something should feel, then building everything it needs to feel that way.
-- Working together | I'm direct, I move quickly, and I take feedback well and run with it. Say hello first; scope and cost come after.
-- The doorway | The easiest way to work with me is brand work: identity, creative direction and digital presence. It's real work I'm good at, and it keeps the rest of the map growing. If you want to go deeper, [the map](index.html#main) goes deeper.
+- Working together | I'm direct, I move quickly, and I take feedback well and run with it. Whether it's a role or a project, the first step is just saying hello.
+- The doorway | Brand work is the easiest way in: identity, creative direction and digital presence. It's what I'm best at, on a team or on a project of my own. [See what that looks like](services.html), or wander [the map](index.html#main) for everything else.
 - If I had $22 million | I'd build a multi-studio creative ecosystem with shared infrastructure: a global content network through Mangosalad, decentralized grants and artist licensing through Artprojects, and community-powered landscapes through Good Dirt. I'd make replicable systems that make artists iconic, not just seen. | quote
 button: say hello
 
@@ -107,14 +113,22 @@ seo_description: Get in touch with mjc about a project, or just to talk.
 label: Contact
 title: Say hello.
 intro: About a role, a project, or something here. A few lines is plenty. Open to part-time creative and marketing opportunities in Toronto and the GTA.
+linkedin_note: You can also [download my CV](assets/Matheus-Camilleri-Resume.pdf) or find me on
 form_note: Or use this and it'll open an email to me, already written.
 name_label: Your name
 brand_label: Brand or company (if there is one)
-message_label: What are you working on?
-message_placeholder: The brand, the goal, anything already decided, or just hi.
+message_label: What's it about?
+message_placeholder: A role, a project, something you saw here, or just hi.
 submit: open in email
 fallback: If your email app didn't open, send it to
 nojs: This needs JavaScript. Please email
+
+# The page people see if they follow a broken or mistyped link
+[notfound]
+label: 404
+title: Nothing here.
+intro: This page doesn't exist, or it moved. Everything that does is on [the map](index.html#main).
+button: back to the map
 
 [project_pages]
 back: ← back to the map

@@ -14,7 +14,7 @@ seo_description: Good Dirt Co. was my concept for a growing business ecosystem: 
 meta:
   Type: A concept for a business ecosystem
   My role: Founder, grower and designer
-  What was real: I grew mushrooms and sold them at the farmers' market in Woodbridge
+  What was real: I grew mushrooms and sold them at the Woodbridge farmers' market: four market days, about $500 in sales
   Status: Paused
 shots:
   - GDC/Logo.png | Good Dirt Co. logo | The logo: a little rough, on purpose
@@ -49,7 +49,7 @@ Education brings people in. Products let them start growing at home. Services de
 
 ## The part that was real
 
-I grew mushrooms and sold them at the farmers' market in Woodbridge. That's when it felt worth it: people stopped, asked questions, and left their contact details because they were interested in what I was doing.
+I grew mushrooms and sold them at the farmers' market in Woodbridge: four market days and about $500 in sales. That's when it felt worth it: people stopped, asked questions, and left their contact details because they were interested in what I was doing.
 
 Most of my projects live on a screen. This one touched the real world: soil, a stall, and people buying something I grew. I'm proud of that.
 

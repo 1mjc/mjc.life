@@ -226,13 +226,14 @@ for p in PROJECTS:
     if p["branch"] not in [b[0] for b in BRANCHES]:
         die(f"{p['name']}: branch '{p['branch']}' isn't listed under [branches] in site.txt.")
 
+SITE_URL = S.get("url", "https://mjc.im").rstrip("/") + "/"
 FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E"
            "%3Crect width='32' height='32' fill='%23ffffff'/%3E%3Ctext x='16' y='23' font-family='Garamond,Georgia,serif' "
            "font-size='20' text-anchor='middle' fill='%23111111'%3Emjc%3C/text%3E%3C/svg%3E")
 
 LD = ('<script type="application/ld+json">\n{"@context":"https://schema.org","@type":"Person","name":"%s","alternateName":"mjc",'
-      '"jobTitle":"%s","email":"%s","description":"%s"}\n</script>'
-      % (NAME, S.get("job_title", ""), EMAIL, S["description"].replace('"', "'")))
+      '"jobTitle":"%s","email":"%s","url":"%s","sameAs":["%s"],"description":"%s"}\n</script>'
+      % (NAME, S.get("job_title", ""), EMAIL, SITE_URL, S["linkedin"], S["description"].replace('"', "'")))
 
 # the black-ink theme is drawn with these SVG filters (rough edges, grit, wobbly letters)
 INK_DEFS = """<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
@@ -262,8 +263,13 @@ def write(name, content):
         fh.write(content)
 
 
-def head(title, desc, extra="", home=False):
+def head(title, desc, extra="", home=False, image=None, path=""):
     scripts = '<script src="assets/js/web.js" defer></script>\n<script src="assets/js/sheet.js" defer></script>\n' if home else ""
+    # link previews (LinkedIn, iMessage, email): a big picture + the page's real address
+    img = SITE_URL + IMG + (image or S["share_image"])
+    url = SITE_URL + ("" if path in ("", "index.html") else path)
+    extra = (f'<link rel="canonical" href="{esc(url)}">\n<meta property="og:url" content="{esc(url)}">\n'
+             f'<meta property="og:image" content="{esc(img)}">\n<meta name="twitter:image" content="{esc(img)}">\n') + extra
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -277,7 +283,7 @@ def head(title, desc, extra="", home=False):
 <meta property="og:site_name" content="mjc">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{FAVICON}">
 <link rel="preload" href="assets/fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
@@ -310,14 +316,14 @@ def inner_header(active):
 FOOT_CORE = f"""</main>
 <footer class="site-footer">
 {nav_html()}
-<p class="legal"><a href="mailto:{EMAIL}">{EMAIL}</a> &middot; &copy; {S.get("year", "")} mjc</p>
+<p class="legal"><a href="mailto:{EMAIL}">{EMAIL}</a> &middot; <a href="{esc(S["linkedin"])}" rel="me noopener" target="_blank">LinkedIn</a> &middot; <a href="{esc(S["cv"])}" target="_blank">CV</a> &middot; &copy; {S.get("year", "")} mjc</p>
 </footer>
 """
 CLOSE = "</body>\n</html>\n"
 
 
-def page(fname, title, desc, active, body, extra=""):
-    write(fname, head(title, desc, extra) + inner_header(active) + body + FOOT_CORE + CLOSE)
+def page(fname, title, desc, active, body, extra="", image=None):
+    write(fname, head(title, desc, extra, image=image, path=fname) + inner_header(active) + body + FOOT_CORE + CLOSE)
 
 
 # ----------------------------------------------------------------------------
@@ -475,7 +481,8 @@ for p in PROJECTS:
 </div>
 </article>
 """
-    page(p["page"], p["seo_title"], p["seo_description"], "work.html", body + (ART_BLOCK if p["layout"] == "art" else ""))
+    share = p["image"] or (p["shots"][0][0] if p.get("shots") else None)
+    page(p["page"], p["seo_title"], p["seo_description"], "work.html", body + (ART_BLOCK if p["layout"] == "art" else ""), image=share)
 
 
 # ----------------------------------------------------------------------------
@@ -642,6 +649,7 @@ CONTACT = f"""<div class="page-head">
 </div>
 <div class="contact">
 <a class="email-link" href="mailto:{EMAIL}">{EMAIL}</a>
+<p class="muted">{inline(C["linkedin_note"])} <a class="textlink" href="{esc(S["linkedin"])}" rel="me noopener" target="_blank">LinkedIn</a>.</p>
 <p class="muted">{inline(C["form_note"])}</p>
 <form data-hello data-to="{EMAIL}">
 <div class="field"><label for="name">{esc(C["name_label"])}</label><input id="name" name="name" autocomplete="name" required></div>
@@ -655,4 +663,19 @@ CONTACT = f"""<div class="page-head">
 """
 page("contact.html", C["seo_title"], C["seo_description"], "contact.html", CONTACT)
 
-print(f"built {len(PROJECTS)} projects + 5 pages into {ROOT}")
+# ----------------------------------------------------------------------------
+# 404 (Vercel serves 404.html for any address that doesn't exist)
+# ----------------------------------------------------------------------------
+NF = SITE["notfound"]
+NOTFOUND = f"""<div class="page-head">
+<p class="label">{inline(NF["label"])}</p>
+<h1>{inline(NF["title"])}</h1>
+<p class="intro">{inline(NF["intro"])}</p>
+<p><a class="btn" href="index.html#main">{inline(NF["button"])}</a></p>
+</div>
+"""
+# <base href="/"> keeps styles and links working even at a deep broken address like /a/b/c
+write("404.html", head(NF["title"] + " | mjc", NF["intro"].split(".")[0] + ".").replace("<head>\n", '<head>\n<base href="/">\n<meta name="robots" content="noindex">\n', 1)
+      + inner_header("") + NOTFOUND + FOOT_CORE + CLOSE)
+
+print(f"built {len(PROJECTS)} projects + 6 pages into {ROOT}")

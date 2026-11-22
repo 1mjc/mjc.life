@@ -13,9 +13,11 @@ seo_description: Art and music videos by mjc, many shot on VHS and cut to Nettsp
 videos:
   # Add your videos here, one per line:   title | link | year | a line about it
   # YouTube and Vimeo links play right on the page; any other link opens in a new tab.
-  - The medium of light and darkness | https://youtu.be/hQfDWGssles | | My favourite. Everything in it is mine except the song. Shot on a VHS camera, with some stock footage.
-  - Only sunny for a moment | https://youtu.be/vXBpayPSSOE | | Shot on a VHS camera, with some stock footage.
-  - Eye for an i | https://youtu.be/r-xSBbjTW6E | |
+  - The medium of light and darkness | https://youtu.be/hQfDWGssles | 2026 | My favourite. Everything in it is mine except the song. Shot on a VHS camera, with some stock footage.
+  - Only sunny for a moment | https://youtu.be/vXBpayPSSOE | 2026 | Shot on a VHS camera, with some stock footage.
+  - Eye for an i | https://youtu.be/r-xSBbjTW6E | 2026 | What are you willing to give up for your greater self? Inspired by the influence a single cell can eventually have on reality.
+  - Input 1 | https://www.instagram.com/reel/C3lwv_rAHx5/ | 2024 | A 3D animation for Mangosalad.
+  - Kill the third person (draft) | https://www.instagram.com/reel/CkmZarDvbZW/ | 2022 | An early cut, made for Mangosalad.
 ---
 
 ## Why the music
@@ -31,4 +33,4 @@ A lot of my videos are cut to songs by Nettspend. His music puts me in a feeling
 
 ## How I work
 
-One person, idea to final cut. I come up with the concept, shoot it, cut it, build the effects and finish it. If a shoot needs more hands, I bring in people I trust and we agree on that up front.
+One person, idea to final cut. I come up with the concept, shoot it, cut it, build the effects and finish it. On a bigger shoot I'm just as happy being one part of a crew.
